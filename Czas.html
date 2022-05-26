@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+</head>
+<script>
+    function alabama() {  
+         var data1 = document.getElementById("dateInput1").value;    
+         var nego = new Date(data1);  
+         var vibro = new Date();  
+         var roznica = vibro.getTime() - nego.getTime();  
+         var suma = Math.floor( roznica/ (1000 * 60 * 60 * 24));  
+         return document.getElementById("suma").innerHTML =    
+              suma + " Dni pomiędzy datami ";  
+                    }  
+      </script>       
+<body>   
+    
+    <h2 style="color: 32A80F">    
+            Kalkulator dni  
+        <br> <br> </h2>   
+    
+        <p> <b> Wpisz date   </b>   
+        <input type="date" id="dateInput1">   
+        <br> <br>   
+          
+        
+        <button onclick="alabama()">   
+          Oblicz  
+        </button>   
+    </p>   
+    
+    <h3 style="color:32A80F" id="suma"></h3>   
+ </script>  
+<body>
+
+</body>
+</html>
